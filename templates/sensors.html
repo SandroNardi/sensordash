@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+
+<head>
+    <title>Sensors</title>
+</head>
+
+<body>
+    <div>
+        {% block content %}
+        {% for x in xes %}
+
+        <div id="sensor">
+            <div id="block" class="name"> {{x.name}}</div>
+            <div id="block" class="value"> {{x.humidity.relativePercentage}} %</div>
+        </div>
+
+        {% endfor %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>
