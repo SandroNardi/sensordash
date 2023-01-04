@@ -15,7 +15,7 @@
         <div id="sensor">
             <div id="block" class="name"> {{x.name}}</div>
             <div id="block" class="value"> {{x.humidity.relativePercentage}} %</div>
-            <div id="block" class="name"> {{x.ts}}</div>
+            <div id="block" class="time"> Last update {{x.last_update}} ago</div>
         </div>
 
         {% endfor %}
