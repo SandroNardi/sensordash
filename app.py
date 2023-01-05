@@ -2,7 +2,6 @@ from flask import Flask, render_template
 import os
 import meraki
 import datetime
-import pytz
 
 API_KEY = os.getenv('API_KEY_RO')
 
