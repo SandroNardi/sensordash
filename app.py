@@ -27,8 +27,8 @@ def home():
         sensors_list = dashboard.organizations.getOrganizationDevicesAvailabilities(
             orgid, total_pages='all', productTypes='sensor'
         )
-    except Exception as e:
-        return render_template("error.html", x=e)
+    except Exception as error:
+        return render_template("error.html", error=error)
     xes = []
     for sensor in sensors_status:
         for reading in sensor['readings']:
