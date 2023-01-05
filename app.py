@@ -6,7 +6,7 @@ import pytz
 
 API_KEY = os.getenv('API_KEY_RO')
 
-orgid = '991866'
+orgid = '000000'
 
 app = Flask(__name__)
 
@@ -16,6 +16,12 @@ def home():
 
     dashboard = meraki.DashboardAPI(API_KEY, suppress_logging=True)
     try:
+        orgs = dashboard.organizations.getOrganizations()
+        for org in orgs:
+            if org['name'] == 'Sandro at Meraki':
+                orgid = org['id']
+                break
+
         sensors_status = dashboard.sensor.getOrganizationSensorReadingsLatest(
             orgid, total_pages='all'
         )
