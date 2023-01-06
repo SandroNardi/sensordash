@@ -2,7 +2,8 @@ from flask import Flask, render_template
 import os
 import meraki
 import datetime as dt
-import pytz
+import zoneinfo as zi
+
 
 API_KEY = os.getenv('API_KEY_RO')
 
@@ -63,9 +64,9 @@ def home():
                 # time zone conversion
 
                 # set time zone
-                tz = pytz.timezone(net_tzones[sensor['network']['id']])
+                tz = zi.ZoneInfo(net_tzones[sensor['network']['id']])
                 # convert current time to time zone
-                now_tz = tz.localize(dt.datetime.now())
+                now_tz = dt.datetime.now().astimezone(tz)
                 # convert last reading time stamp to time zone
                 last_reading_tz = dt.datetime.fromisoformat(
                     reading['ts']).astimezone(tz)
