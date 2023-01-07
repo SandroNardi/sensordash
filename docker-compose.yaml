@@ -1,0 +1,11 @@
+version: "1"
+
+services:
+  sensordash:
+    container_name: sensordash
+    image: sensordash:latest
+    ports:
+      - "5000:5000/tcp"
+    environment:
+      API_KEY_RO: '${API_KEY_RO}'
+    restart: unless-stopped
