@@ -7,7 +7,7 @@ rm -rf sensordash
 #clone from github
 git clone git@github.com:SandroNardi/sensordash.git
 #move in directory
-cd sensordash
+cd ~/sensordash
 #venv create and activate
 python3 -m venv deploy
 source deploy/bin/activate
