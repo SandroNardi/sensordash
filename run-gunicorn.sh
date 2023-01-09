@@ -1,3 +1,5 @@
+#not worknig at all
+
 #move to home
 cd ~
 # kill running proces

@@ -1,6 +1,7 @@
 # Sensordash
 Provide a minimal flask web page with humidity info about meraki sensors
 
+script are not working
 ## Get from GH
 ```bash
 #clone from github
