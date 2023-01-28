@@ -83,7 +83,7 @@ def home():
 
                 # add to printalbe list {sensor name, current humidity %, last update xx h xx m}
                 sensor_to_output.append(
-                    {'name': sensor_device['name'], 'humidity': reading['humidity'], 'last_update': last_update})
+                    {'name': sensor_device['name'], 'humidity': reading['humidity'], 'temperature': reading['temperature'], 'last_update': last_update})
 
     # render in template sensors
     return render_template("sensors.html", sensor_to_output=sensor_to_output)
