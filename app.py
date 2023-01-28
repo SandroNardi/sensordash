@@ -5,7 +5,7 @@ import datetime as dt
 import zoneinfo as zi
 
 
-API_KEY = os.getenv('meraki-home-net-RO')
+API_KEY = os.getenv('MERAKI_HOME_NET_RO')
 
 orgid = '000000'
 org_name = 'Sandro at Meraki'
