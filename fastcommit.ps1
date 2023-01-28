@@ -1,3 +1,3 @@
 git add *
 git commit -m "horrible fastcommit"
-git push rsensordash master
+git push remote master
