@@ -7,5 +7,5 @@ services:
     ports:
       - "5000:5000/tcp"
     environment:
-      API_KEY_RO: '${MERAKI_HOME_NET_RO}'
+      MERAKI_HOME_NET_RO: '${MERAKI_HOME_NET_RO}'
     restart: unless-stopped
