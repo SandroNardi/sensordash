@@ -68,8 +68,9 @@ def home():
                 # convert current time to time zone
                 now_tz = dt.datetime.now().astimezone(tz)
                 # convert last reading time stamp to time zone
-                last_reading_tz = dt.datetime.fromisoformat(
-                    reading['ts']).astimezone(tz)
+                last_reading_tz = dt.datetime.now().astimezone(tz)
+
+                # dt.datetime.fromisoformat(reading['ts']).astimezone(tz)
                 # calculate the difference
                 delta = now_tz-last_reading_tz
 

@@ -16,4 +16,4 @@ source deploy/bin/activate
 #install pip requirements
 pip3 install -r requirements.txt 
 #run with gunicorn
-gunicorn -b 0.0.0.0:5000 app:app &
+gunicorn -b 0.0.0.0:4000 app:app &

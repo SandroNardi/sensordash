@@ -2,7 +2,7 @@
 
 FROM python:3.11.1-slim-buster
 
-WORKDIR /
+WORKDIR /python-docker
 
 RUN apt-get update \
 && apt-get install gcc -y \
