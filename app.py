@@ -3,7 +3,7 @@ import os
 import meraki
 import datetime as dt
 import zoneinfo as zi
-
+import dateutil.parser as datep
 
 API_KEY = os.getenv('MERAKI_HOME_NET_RO')
 
@@ -68,9 +68,12 @@ def home():
                 # convert current time to time zone
                 now_tz = dt.datetime.now().astimezone(tz)
                 # convert last reading time stamp to time zone
-                last_reading_tz = dt.datetime.fromisoformat(reading['ts']).astimezone(tz)
+                last_reading_tz = datep.isoparse(reading['ts'])
+
+                #last_reading_tz = dt.datetime.fromisoformat(reading['ts']).astimezone(tz)
                 # calculate the difference
                 delta = now_tz-last_reading_tz
+
 
                 # convert delta in minutes and seconds
                 total_seconds = int(delta.total_seconds())
