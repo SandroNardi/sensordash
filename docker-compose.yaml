@@ -12,5 +12,6 @@ services:
     volumes:
       - './app:/app'
     #command: pip3 install -r app/requirements.txt
-    restart: unless-stopped
+    #restart: unless-stopped
+    tty: true
     
