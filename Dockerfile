@@ -10,7 +10,7 @@ RUN apt-get update \
 
 RUN mkdir -p /app
 COPY app/requirements.txt app/req.txt
-RUN pip3 install -r req.txt
+RUN pip3 install -r app/req.txt
 
 #COPY . .
 
