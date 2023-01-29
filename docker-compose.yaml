@@ -9,5 +9,9 @@ services:
     environment:
       MERAKI_HOME_NET_RO: '${MERAKI_HOME_NET_RO}'
     restart: unless-stopped
+    depends_on:
+    - startup
+  startup:
     volumes:
       - '.:./app'
+    command: pip3 install -r requirements.txt

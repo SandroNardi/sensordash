@@ -8,9 +8,9 @@ RUN apt-get update \
 && apt-get install gcc -y \
 && apt-get clean
 
-COPY app/requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+#COPY app/requirements.txt requirements.txt
+#RUN pip3 install -r requirements.txt
 
-COPY . .
+#COPY . .
 
-CMD ["gunicorn"  , "-b", "0.0.0.0:5000", "app/app:app"]
+#CMD ["gunicorn"  , "-b", "0.0.0.0:5000", "app/app:app"]
