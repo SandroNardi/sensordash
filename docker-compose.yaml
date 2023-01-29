@@ -8,9 +8,9 @@ services:
       - "5000:5000/tcp"
     environment:
       MERAKI_HOME_NET_RO: '${MERAKI_HOME_NET_RO}'
-    restart: unless-stopped
-    depends_on:
-    - startup
+    
     volumes:
-      - '.:/app'
+      - '/app:/app'
     command: pip3 install -r requirements.txt
+    restart: unless-stopped
+    
