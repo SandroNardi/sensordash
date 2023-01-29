@@ -9,8 +9,9 @@ RUN apt-get update \
 && apt-get clean
 
 RUN mkdir -p /app
+RUN mkdir -p /base
 
-#COPY app/requirements.txt requirements.txt
+COPY app/requirements.txt base/requirements.txt
 #RUN pip3 install -r requirements.txt
 
 #COPY . .
