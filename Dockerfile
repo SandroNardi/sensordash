@@ -8,6 +8,8 @@ RUN apt-get update \
 && apt-get install gcc -y \
 && apt-get clean
 
+RUN mkdir -p /app
+
 #COPY app/requirements.txt requirements.txt
 #RUN pip3 install -r requirements.txt
 
