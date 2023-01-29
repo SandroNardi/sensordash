@@ -10,7 +10,7 @@ services:
       MERAKI_HOME_NET_RO: '${MERAKI_HOME_NET_RO}'
     
     volumes:
-      - './app:.'
+      - './app:/'
     #command: pip3 install -r app/requirements.txt
     #restart: unless-stopped
     tty: true
