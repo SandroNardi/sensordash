@@ -12,6 +12,7 @@ services:
     depends_on:
     - startup
   startup:
+    image: sensordash:latest 
     volumes:
       - '.:./app'
     command: pip3 install -r requirements.txt
