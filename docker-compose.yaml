@@ -9,3 +9,5 @@ services:
     environment:
       MERAKI_HOME_NET_RO: '${MERAKI_HOME_NET_RO}'
     restart: unless-stopped
+    volumes:
+      - '.:./app'
